@@ -8,10 +8,6 @@ const SearchBar = (props) => {
         <form>
             <input type="search"/> 
             <button type="submit">Search</button>
-
-            
-
-
         </form>
       );
 }
