@@ -1,9 +1,8 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios';
 import './App.css';
-
-import SearchBar from './Components/SearchBar/SearchBar';
 import DisplayInvestmentChart from './Components/DisplayInvestmentChart/DisplayInvestmentChart';
+import SearchResults from './Components/SearchResults/SearchResults';
 
 function App() {
 
@@ -26,7 +25,7 @@ async function getVideoGames(){
   return (
     <div >
       Video games!
-      <SearchBar/>
+      <SearchResults videoGames={videoGames}/>
       <DisplayInvestmentChart videoGames={videoGames}/>
     </div>
   );
