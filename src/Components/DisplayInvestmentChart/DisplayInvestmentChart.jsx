@@ -19,19 +19,12 @@ const DisplayInvestmentChart = ({videoGames}) => {
        let platformArrays = distinctPlatforms.map(platform =>{
         
 
-        let allGamesForPlatform = filteredGames.filter(game => game.platform == platform);
+        let allGamesForPlatform = filteredGames.filter(game => game.platform === platform);
         console.log("All games for platform: ", allGamesForPlatform)
-        //now we need to loop through allGamesForPlaform and sum each games global sales
-        //Once we have the sum of all those games global sales
-        // let sumOfGamesGlobalSales = allGamesForPlaform.map
-        //for each game in current platform add global sales
-        let total = 0;
-        for(var games in allGamesForPlatform){
-            total += games.globalSales;
-            console.log("total: ", total)
-        }
 
-        return [platform, 10, "silver"]
+        let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)}).reduce((currIndex, prevIndex) => (currIndex + prevIndex))
+
+        return [platform, globalSalesSum, "silver"]
 
        });
 
