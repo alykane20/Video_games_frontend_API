@@ -1,7 +1,13 @@
-import SearchResults from "./SearchResults";
 import {Chart} from "react-google-charts";
 
 const DisplaySearchResults = ({searchResults}) => {
+    
+    const options = {
+        title: "Global Sales per Console",
+        hAxis: { title: "Console"},
+        vAxis: { title: "Global Sales"},
+        legend: "none"
+    }
 
    function gameChartData(){
 
@@ -14,12 +20,13 @@ const DisplaySearchResults = ({searchResults}) => {
      let platformArrays = distinctPlatforms.map(platform =>{
 
       let allGamesForPlatform = searchResults.filter(game => game.platform === platform);
-        console.log(allGamesForPlatform)
-      let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
 
+      let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
+      console.log(globalSalesSum)
       return [platform, globalSalesSum, "silver"]
 
      });
+
 
     const data = [
         ["Console", "Global Sales", {role: "style"}],
@@ -36,6 +43,8 @@ const DisplaySearchResults = ({searchResults}) => {
         width= "100%"
         height="400px"
         data={gameChartData()}
+        options={options}
+        
         />
     );
     }
