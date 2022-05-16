@@ -27,7 +27,6 @@ async function getVideoGames(){
     <div >
       Video games!
       <SearchResults videoGames={videoGames}/>
-      <DisplaySearchResults />
       <DisplayInvestmentChart videoGames={videoGames}/>
     </div>
   );

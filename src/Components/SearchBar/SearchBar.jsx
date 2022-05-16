@@ -4,6 +4,7 @@ import React from "react";
 const SearchBar = (props) => {
     function handleSubmit (event){
         event.preventDefault()
+        props.getSearchResult()
     } 
     return (
         <form onSubmit={handleSubmit}>

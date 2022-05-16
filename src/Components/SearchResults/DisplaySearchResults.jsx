@@ -4,7 +4,7 @@ import {Chart} from "react-google-charts";
 const DisplaySearchResults = ({searchResults}) => {
 
    function gameChartData(){
-    
+    debugger
     let platforms = searchResults.map(game => {
         return game.platform
      });
@@ -35,8 +35,7 @@ const DisplaySearchResults = ({searchResults}) => {
         chartType="Bar"
         width= "100%"
         height="400px"
-        data={gameChartData}
-        // options={options}
+        data={gameChartData()}
         />
     );
     }

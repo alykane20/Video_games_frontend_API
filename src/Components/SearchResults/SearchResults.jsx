@@ -6,20 +6,21 @@ const SearchResults = (props) => {
     const[name , setName] = useState("")
     const [searchResults, setSearchResults] = useState([])
 
-    useEffect(()=> {
-        getSearchResult();
-    console.log(name)
-}, [getSearchResults, name])
-    
-     function getSearchResult(){
+    const getSearchResult =() => {
         let currentSearch = props.videoGames.filter(el => el.name === name) 
         console.log(currentSearch)
         setSearchResults(currentSearch)
-        return currentSearch
+        //return currentSearch
     }
+    
+    // useEffect(()=> {
+//     console.log(name)
+// }, [name])
+    
+     
     return (
     <div>
-        <SearchBar setName={setName}/>
+        <SearchBar setName={setName} getSearchResult={getSearchResult}/>
         <DisplaySearchResults searchResults={searchResults}/>
     </div>
     );
