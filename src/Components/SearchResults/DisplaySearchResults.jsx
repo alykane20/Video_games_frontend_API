@@ -23,7 +23,7 @@ const DisplaySearchResults = ({searchResults}) => {
 
       let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
       console.log(globalSalesSum)
-      return [platform, globalSalesSum, "silver"]
+      return [platform, parseFloat(globalSalesSum), "silver"]
 
      });
 
