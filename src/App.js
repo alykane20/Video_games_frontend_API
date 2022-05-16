@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import DisplayInvestmentChart from './Components/DisplayInvestmentChart/DisplayInvestmentChart';
 import SearchResults from './Components/SearchResults/SearchResults';
-import DisplaySearchResults from './Components/SearchResults/DisplaySearchResults';
+import CustomQuestion from './Components/CustomQuestion/CustomQuestion'
 
 function App() {
 
@@ -28,6 +28,7 @@ async function getVideoGames(){
       Video games!
       <SearchResults videoGames={videoGames}/>
       <DisplayInvestmentChart videoGames={videoGames}/>
+      <CustomQuestion videoGames={videoGames}/>
     </div>
   );
 }
