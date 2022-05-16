@@ -29,7 +29,7 @@ const DisplayInvestmentChart = ({videoGames}) => {
        });
 
     const data = [
-    ["Platform", "Sales", { role: "style" } ],
+    ["Platform", "Sales in Millions", { role: "style" } ],
         ...platformArrays
         
   ]

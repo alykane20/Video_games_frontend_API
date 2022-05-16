@@ -4,7 +4,7 @@ import {Chart} from "react-google-charts";
 const DisplaySearchResults = ({searchResults}) => {
 
    function gameChartData(){
-    debugger
+
     let platforms = searchResults.map(game => {
         return game.platform
      });
@@ -14,7 +14,7 @@ const DisplaySearchResults = ({searchResults}) => {
      let platformArrays = distinctPlatforms.map(platform =>{
 
       let allGamesForPlatform = searchResults.filter(game => game.platform === platform);
-     
+        console.log(allGamesForPlatform)
       let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
 
       return [platform, globalSalesSum, "silver"]
@@ -22,7 +22,7 @@ const DisplaySearchResults = ({searchResults}) => {
      });
 
     const data = [
-        ["Console", "Copies Sold", {role: "style"}],
+        ["Console", "Global Sales", {role: "style"}],
         ...platformArrays
     ]
     return data
