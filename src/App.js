@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import DisplayInvestmentChart from './Components/DisplayInvestmentChart/DisplayInvestmentChart';
 import SearchResults from './Components/SearchResults/SearchResults';
+import DisplaySearchResults from './Components/SearchResults/DisplaySearchResults';
 
 function App() {
 
@@ -26,6 +27,7 @@ async function getVideoGames(){
     <div >
       Video games!
       <SearchResults videoGames={videoGames}/>
+      <DisplaySearchResults />
       <DisplayInvestmentChart videoGames={videoGames}/>
     </div>
   );
