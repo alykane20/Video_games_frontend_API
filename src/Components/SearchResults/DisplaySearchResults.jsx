@@ -45,7 +45,7 @@ const DisplaySearchResults = ({searchResults}) => {
         <Chart
         chartType="Bar"
         width= "100%"
-        height="200px"
+        height="400px"
         data={gameChartData()}
         options={options}
         />
