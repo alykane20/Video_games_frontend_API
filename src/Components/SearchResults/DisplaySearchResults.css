@@ -1,15 +1,32 @@
 .resulttable{
-    top: 3rem;
-    align-items: center;
-    position: absolute;
-    left: 40rem;
-    margin-inline-start: auto;
-    border-collapse: separate;
-    text-indent: initial;
-    border-spacing: 3px;
-
+        border: 1px solid black;
+        display: inline-block;
+        top: 30rem;
+        margin-left: 4rem;
+        left: 40rem;
+        text-align: center;
+      }
    
-}
+
+    .searchchart{
+        display: inline-block;
+        padding: 2rem;
+        top: 4rem;
+        vertical-align: middle;
+        padding-left: 2rem;
+        
+      }
+    
+
+    .DsrChart {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 2rem;
+        vertical-align: middle;
+        padding-left: 2rem;
+        
+      }
+    
+
 
 th.Name {
     display: table-cell;
@@ -45,8 +62,3 @@ th.Publisher {
     font-size: 20px;
 }
 
-.DsrChart {
-    padding-top: 2rem;
-    margin-bottom: 5rem;
-    padding: 2rem;
-}

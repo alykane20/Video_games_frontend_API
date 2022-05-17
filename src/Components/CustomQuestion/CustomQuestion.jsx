@@ -1,4 +1,5 @@
 import {Chart} from "react-google-charts";
+import './CustomQuestion.css';
 
 
 const CustomQuestion = ({videoGames}) => {
@@ -21,7 +22,7 @@ const CustomQuestion = ({videoGames}) => {
         });
  
      const data = [
-     ["Year", "Rank", { role: "style" } ],
+     ["Game Name", "Rank", { role: "style" } ],
          ...gamesArrays
          
    ]
@@ -30,7 +31,7 @@ const CustomQuestion = ({videoGames}) => {
  
 
     return ( 
-    
+        <div className="Cqchart">
         <Chart title="Custom Chart"
         chartType="Bar"
         width= "100%"
@@ -39,6 +40,7 @@ const CustomQuestion = ({videoGames}) => {
         data={generateChartData()}
         // options={options}
         />
+        </div>
 
 
      );

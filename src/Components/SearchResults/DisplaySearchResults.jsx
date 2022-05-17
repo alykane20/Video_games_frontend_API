@@ -40,14 +40,17 @@ const DisplaySearchResults = ({searchResults}) => {
     return (  
         
         <div className="DsrChart">
-        <Chart title="Search Chart"
+            <div className="searchchart">
+        <Chart
         chartType="Bar"
-        width= "65%"
+        width= "100%"
         height="200px"
         data={gameChartData()}
         options={options}
-        
         />
+        </div>
+
+        
         <table className="resulttable">
             <tbody>
         <tr className="table-header">
