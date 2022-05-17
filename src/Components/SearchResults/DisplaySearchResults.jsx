@@ -1,4 +1,5 @@
 import {Chart} from "react-google-charts";
+import './DisplaySearchResults.css';
 
 const DisplaySearchResults = ({searchResults}) => {
 
@@ -38,16 +39,17 @@ const DisplaySearchResults = ({searchResults}) => {
     
     return (  
         
-        <div>
-        <Chart className="DsrChart"
+        <div className="DsrChart">
+        <Chart title="Search Chart"
         chartType="Bar"
-        width= "50%"
+        width= "65%"
         height="200px"
         data={gameChartData()}
         options={options}
         
         />
-        <table>
+        <table className="resulttable">
+            <tbody>
         <tr className="table-header">
                         <th>Name</th>
                         <th>Platform</th>
@@ -63,6 +65,7 @@ const DisplaySearchResults = ({searchResults}) => {
                         <td className="row">{game.publisher}</td>
                         <td className="row">{game.genre}</td>
                     </tr>))}
+                    </tbody>
                  </table>
         </div>
             );

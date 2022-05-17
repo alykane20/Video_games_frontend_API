@@ -1,4 +1,5 @@
 import {Chart} from "react-google-charts";
+import './DisplayInvestmentChart.css';
 
 const DisplayInvestmentChart = ({videoGames}) => {
 
@@ -36,14 +37,14 @@ const DisplayInvestmentChart = ({videoGames}) => {
 }
 
     return (  
-       
-        <Chart className="DIChart"
+       <div className="DIChart">
+        <Chart 
         chartType="Bar"
         width= "100%"
         height="400px"
         data={generateChartData()}
         //options={options}
-        />
+        /></div>
     );
 }
  

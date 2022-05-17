@@ -8,7 +8,6 @@ const SearchResults = (props) => {
 
     const getSearchResult =() => {
         let currentSearch = props.videoGames.filter(el => el.name === name) 
-        console.log(currentSearch)
         setSearchResults(currentSearch)
         //return currentSearch
     }

@@ -1,5 +1,6 @@
 import {Chart} from "react-google-charts";
 
+
 const CustomQuestion = ({videoGames}) => {
 
     function generateChartData(){
@@ -29,12 +30,14 @@ const CustomQuestion = ({videoGames}) => {
  
 
     return ( 
-        <Chart
+    
+        <Chart title="Custom Chart"
         chartType="Bar"
         width= "100%"
         height="400px"
+        margin-left = "1rem"
         data={generateChartData()}
-        //options={options}
+        // options={options}
         />
 
 

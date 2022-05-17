@@ -1,0 +1,52 @@
+.resulttable{
+    top: 3rem;
+    align-items: center;
+    position: absolute;
+    left: 40rem;
+    margin-inline-start: auto;
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 3px;
+
+   
+}
+
+th.Name {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:center;
+}
+
+th.Platform {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:center;
+}
+
+th.Year {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:center;
+}
+
+th.Publisher {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:center;
+    right: inherit;
+}
+
+.table-header { 
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+.DsrChart {
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+}

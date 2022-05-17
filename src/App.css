@@ -1,7 +1,7 @@
-
-
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(rgb(230, 148, 121), rgba(223, 142, 28, 0.986), rgb(233, 26, 26));
+  
+  
  
 }
 
@@ -43,6 +43,9 @@
 h1 {
   margin: 0;
   font-size: 2rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
   display: inline-flex;
   align-items: flex-start;
   flex-direction: column;
