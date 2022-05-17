@@ -1,7 +1,8 @@
 import {Chart} from "react-google-charts";
 
 const DisplaySearchResults = ({searchResults}) => {
-    
+
+
     const options = {
         title: "Global Sales per Console",
         hAxis: { title: "Console"},
@@ -19,11 +20,11 @@ const DisplaySearchResults = ({searchResults}) => {
 
      let platformArrays = distinctPlatforms.map(platform =>{
 
-      let allGamesForPlatform = searchResults.filter(game => game.platform === platform);
+     let allGamesForPlatform = searchResults.filter(game => game.platform === platform);
 
-      let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
-      console.log(globalSalesSum)
-      return [platform, parseFloat(globalSalesSum), "silver"]
+     let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
+     
+     return [platform, parseFloat(globalSalesSum), "silver"]
 
      });
 
@@ -37,16 +38,34 @@ const DisplaySearchResults = ({searchResults}) => {
     
     return (  
         
-        
-        <Chart
+        <div>
+        <Chart className="DsrChart"
         chartType="Bar"
-        width= "100%"
-        height="400px"
+        width= "50%"
+        height="200px"
         data={gameChartData()}
         options={options}
         
         />
-    );
+        <table>
+        <tr className="table-header">
+                        <th>Name</th>
+                        <th>Platform</th>
+                        <th>Year</th>
+                        <th>Publisher</th>
+                        <th>Genre</th>
+                    </tr>
+                    {searchResults.map((game)=>(
+                    <tr className="row" key={game.id}>
+                        <td className="row">{game.name}</td>
+                        <td className="row">{game.platform}</td>
+                        <td className="row">{game.year}</td>
+                        <td className="row">{game.publisher}</td>
+                        <td className="row">{game.genre}</td>
+                    </tr>))}
+                 </table>
+        </div>
+            );
     }
  
 export default DisplaySearchResults;     

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {Chart} from "react-google-charts";
 
 const DisplayInvestmentChart = ({videoGames}) => {
@@ -38,7 +37,7 @@ const DisplayInvestmentChart = ({videoGames}) => {
 
     return (  
        
-        <Chart
+        <Chart className="DIChart"
         chartType="Bar"
         width= "100%"
         height="400px"

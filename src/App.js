@@ -25,7 +25,7 @@ async function getVideoGames(){
 
   return (
     <div >
-      Video games!
+      <h1>Video games!</h1>
       <SearchResults videoGames={videoGames}/>
       <DisplayInvestmentChart videoGames={videoGames}/>
       <CustomQuestion videoGames={videoGames}/>
