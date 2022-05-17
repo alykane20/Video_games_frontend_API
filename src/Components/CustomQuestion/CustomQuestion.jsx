@@ -5,22 +5,18 @@ const CustomQuestion = ({videoGames}) => {
     function generateChartData(){
 
         let filteredGames = videoGames.filter(game => game.year >= 2005 && game.year <= 2015);
-        
-        filteredGames.sort((a,b) => {
-            return b.rank - a.rank
+        //Sorts rank in ascending order
+        filteredGames = filteredGames.sort((a,b) => {
+            return a.rank - b.rank
         })
-        console.log(filteredGames)
-        
-       
-        let gamesArrays = gamesByRank.map(name =>{
-         
-         let allGamesForPlatform = filteredGames.filter(game => game.name === name);
-        
- 
-         let rankedByPlatform = allGamesForPlatform.map(game => {return(game.rank)})
- 
-         return [name, parseFloat(rankedByPlatform), "silver"]
- 
+        //Returns 10 element array
+        let topTenRankedGames = [...filteredGames.slice(0,10)]
+
+        console.log(topTenRankedGames)
+     
+        //Returns a map of name and rank for current game
+        let gamesArrays = topTenRankedGames.map(currentGame =>{
+         return [currentGame.name, parseFloat(currentGame.rank), "silver"]
         });
  
      const data = [
