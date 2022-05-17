@@ -38,6 +38,7 @@ const DisplayInvestmentChart = ({videoGames}) => {
 
     return (  
        <div className="DIChart">
+           <h3>Total Global Sales Per Platform</h3>
         <Chart 
         chartType="Bar"
         width= "100%"

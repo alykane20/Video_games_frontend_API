@@ -41,6 +41,7 @@ const DisplaySearchResults = ({searchResults}) => {
         
         <div className="DsrChart">
             <div className="searchchart">
+        <h3>Game Copies Sold Per Console</h3>
         <Chart
         chartType="Bar"
         width= "100%"
@@ -52,7 +53,8 @@ const DisplaySearchResults = ({searchResults}) => {
 
         
         <table className="resulttable">
-            <tbody>
+            <tbody> 
+                <h3>Game Information</h3>
         <tr className="table-header">
                         <th>Name</th>
                         <th>Platform</th>

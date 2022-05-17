@@ -32,6 +32,7 @@ const CustomQuestion = ({videoGames}) => {
 
     return ( 
         <div className="Cqchart">
+        <h3>Top 10 Games from 2005-2015</h3>
         <Chart title="Custom Chart"
         chartType="Bar"
         width= "100%"
