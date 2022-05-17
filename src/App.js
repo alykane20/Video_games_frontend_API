@@ -25,7 +25,7 @@ async function getVideoGames(){
 
   return (
     <div >
-      <h1> OVERRRR 16 THOUSAND!</h1>
+      <h1> Video Game Collection</h1>
       <SearchResults videoGames={videoGames}/>
       <DisplayInvestmentChart videoGames={videoGames}/>
       <CustomQuestion videoGames={videoGames}/>
