@@ -1,9 +1,7 @@
 import {Chart} from "react-google-charts";
-import './DisplaySearchResults.css';
 
 const DisplaySearchResults = ({searchResults}) => {
-
-
+    
     const options = {
         title: "Global Sales per Console",
         hAxis: { title: "Console"},
@@ -21,11 +19,11 @@ const DisplaySearchResults = ({searchResults}) => {
 
      let platformArrays = distinctPlatforms.map(platform =>{
 
-     let allGamesForPlatform = searchResults.filter(game => game.platform === platform);
+      let allGamesForPlatform = searchResults.filter(game => game.platform === platform);
 
-     let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
-     
-     return [platform, parseFloat(globalSalesSum), "silver"]
+      let globalSalesSum = allGamesForPlatform.map(game => {return(game.globalSales)})
+      console.log(globalSalesSum)
+      return [platform, parseFloat(globalSalesSum), "silver"]
 
      });
 
@@ -39,41 +37,16 @@ const DisplaySearchResults = ({searchResults}) => {
     
     return (  
         
-        <div className="DsrChart">
-            <div className="searchchart">
-        <h3>Game Copies Sold Per Console</h3>
+        <div>
         <Chart
         chartType="Bar"
         width= "100%"
-        height="200px"
+        height="400px"
         data={gameChartData()}
         options={options}
         />
         </div>
-
-        
-        <table className="resulttable">
-            <tbody> 
-                <h3>Game Information</h3>
-        <tr className="table-header">
-                        <th>Name</th>
-                        <th>Platform</th>
-                        <th>Year</th>
-                        <th>Publisher</th>
-                        <th>Genre</th>
-                    </tr>
-                    {searchResults.map((game)=>(
-                    <tr className="row" key={game.id}>
-                        <td className="row">{game.name}</td>
-                        <td className="row">{game.platform}</td>
-                        <td className="row">{game.year}</td>
-                        <td className="row">{game.publisher}</td>
-                        <td className="row">{game.genre}</td>
-                    </tr>))}
-                    </tbody>
-                 </table>
-        </div>
-            );
+    );
     }
  
 export default DisplaySearchResults;     
